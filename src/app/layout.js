@@ -15,9 +15,7 @@ export default function RootLayout({ children }) {
             <div className="flex justify-between">
                <div className="flex justify-start font-semibold text-sm p-3 ">
                  <Link href="/" className=" hover:text-blue-500 items-center p-2 ">Home</Link>
-                 <Link href="/about" className=" hover:text-blue-500 p-2 ">about</Link>
-                 
-                 <Link href= "/contact" className=" hover:text-blue-500 p-2 ">contact</Link>
+            
                  <Link href="/calendrier" className=" hover:text-blue-500 p-2 ">calendar</Link>
                   <Link href="/calendar" className=" hover:text-blue-500 p-2 ">add event</Link>
                </div> 
