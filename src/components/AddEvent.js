@@ -3,18 +3,19 @@ import React, { useState } from "react";
 export default function AddEvent ({ onAdd }){
 const [eventTitle, setEventTitle] = useState ("")
 const [eventDate, setEventDate] = useState("")
-const AddNewEvent = ()=>{
+  const AddNewEvent = ()=>{
 
 if (!eventTitle || !eventDate) return;
  onAdd({ title: eventTitle , date: eventDate }); 
  setEventTitle(""); setEventDate("");
         
 }
+
 return (<>
 
-<input className="mb-7 rounded-2xl p-2 bg-white" type="text" placeholder="add your event" onChange={(e)=>{setEventTitle(e.target.value)}} value={eventTitle}/>,
+<input className="mb-4 rounded-2xl p-2 bg-white" type="text" placeholder="add your event" onChange={(e)=>{setEventTitle(e.target.value)}} value={eventTitle}/>,
 <br/>
-<input  className="mb-7 rounded-2xl p-3 bg-white" type="date" placeholder="add Date" onChange={(e)=>{setEventDate(e.target.value)} }value={eventDate}/>,
+<input  className="mb-4 rounded-2xl p-2 bg-white" type="date" placeholder="add Date" onChange={(e)=>{setEventDate(e.target.value)} }value={eventDate}/>
 
 
 <br/>

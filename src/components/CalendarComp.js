@@ -3,20 +3,21 @@
 import { useState } from "react";
 import FullCalendar from "@fullcalendar/react";
 
-import dayGridePluging from "@fullcalendar/daygrid";
-import iteractionPluging from "@fullcalendar/interaction";
+import dayGridPluging from "@fullcalendar/daygrid";
+import iteractionPlugin from "@fullcalendar/interaction";
 
 
-export default function CalendarComp(events){
+export default function CalendarComp({events}){
 const [date,setDate] = useState(new Date())
 return (
-<div className=" h-200 bg-white   w-250 pt-10  ">
+<div className="  bg-white  h-[700px] w-[700px] py-10 px-5  rounded-2xl ">
 <h1 className="mb-10 text-2xl font-semibold" >calendar</h1>
  < FullCalendar
- plugins={[dayGridePluging,iteractionPluging]}
+ plugins={[dayGridPluging,iteractionPlugin]}
  initialView="dayGridMonth"
-
-className =" "
+ events ={events}
+className ="  "
+height="auto"
 />
 
 </div> 
